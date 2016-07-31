@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Classwork 3, Task 2</title> 
+
+<script>
+    
+    function Calculator(a, b) {
+        this.read = function() {
+            this.a = prompt('Введіть а');
+            this.b = prompt('Введіть b');
+        };
+        
+        this.sum = function() {
+            return +this.a + +this.b;
+        };
+        
+        this.mul = function() {
+            return this.a * this.b;
+        };
+    }
+    
+    var calculator = new Calculator();
+    calculator.read();
+
+    alert( "Сумма=" + calculator.sum() );
+    alert( "Произведение=" + calculator.mul() );
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>

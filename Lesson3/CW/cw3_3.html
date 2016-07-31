@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Classwork 3, Task 3</title> 
+
+<script>
+    
+    function Summator() {
+        this.sum = function(a, b) {
+            return +this.a + +this.b;
+        };
+        
+        this.run = function() {
+            this.a = prompt('Введіть а');
+            this.b = prompt('Введіть b');
+            
+            return this.sum();
+        };
+    }
+    
+    var calculator = new Summator().run();
+		alert( "Сума = " + calculator);
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>
