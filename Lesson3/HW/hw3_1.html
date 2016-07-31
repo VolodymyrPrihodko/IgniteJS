@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Homework 3, Task 1</title> 
+
+<script>
+    
+    function sum(x) {
+        return function nextSum(y) {
+            x = x + y;
+            nextSum.toString = function () {
+				return x;
+            }
+            return nextSum;
+        }
+    };
+    
+    alert(sum(1)(2));
+    alert(sum(1)(2)(3));
+    alert(sum(5)(-1)(2));
+    alert(sum(6)(-1)(-2)(-3));
+    alert(sum(0)(1)(2)(3)(4)(5));
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>

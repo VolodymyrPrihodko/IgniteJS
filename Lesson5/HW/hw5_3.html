@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Homework 3, Task 3</title> 
+
+<script>
+    
+    function main(counter) {
+        var stop = counter*1000;
+        function showCount() {
+            document.write(counter--);
+            document.close();
+        };
+
+        var timer = setInterval(showCount, 1000);
+        
+        setTimeout(function() {
+            clearInterval(timer); 
+            alert('Отсчет закончен!'); 
+        }, stop);
+    }
+    
+    main(4);
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>

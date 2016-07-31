@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Homework 1, Task 3</title> 
+
+<script>
+		
+    function bigToSmall(arr) {
+        arr = arr.reduce(function(main, next){
+            return main.concat(next);
+        });
+			
+        Sort(arr);
+        return arr.join('>');
+    }
+    
+    function Sort(arr) {
+        var count = arr.length;
+    
+        for(var i = 0; i < arr.length; i++)
+        {
+            for(var j = 1; j < count; j++)
+            {
+                if(arr[j-1] > arr[j])
+                {
+                    var max = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = max;
+                }
+            }
+            count--;
+        }
+        return arr.reverse();
+    }
+    
+    alert(bigToSmall([[1,2],[3,4],[5,6]]));
+    alert(bigToSmall([[1,3,5],[2,4,6]]));
+    alert(bigToSmall([[1,1],[1],[1,1]]));;
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>
