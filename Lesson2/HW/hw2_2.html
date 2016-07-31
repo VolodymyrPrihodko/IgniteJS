@@ -8,28 +8,27 @@
 <script>
     
     function strCount(obj) {
-			var counter = 0;
+        var counter = 0;
         
-			for (var i in obj) {
-				if (typeof obj[i] === "string") {
-					counter++;
-				} else if (typeof obj[i] === "object") {
-					counter += strCount(obj[i]);
-				}
-			}
-        
-			return counter;
-		}
+        for (var i in obj) {
+            if (typeof obj[i] === "string") {
+				counter++;
+            } else if (typeof obj[i] === "object") {
+				counter += strCount(obj[i]);
+            }
+        }    
+    return counter;
+    }
     
-		var obj = {
-			first: "1",
-			second: "2",
-			third: false,
-			fourth: ["anytime",2,3,4],
-			fifth:  null
-		};
+    var obj = {
+        first: "1",
+        second: "2",
+        third: false,
+        fourth: ["anytime",2,3,4],
+        fifth:  null
+    };
     
-		alert(strCount(obj));
+    alert(strCount(obj));
     
 </script> 
 

@@ -8,28 +8,28 @@
 <script>
     
     function smartSum() {
-            var result = 0;
+        var result = 0;
+        [].forEach.call(arguments, function(item) {
+            result = result + item;
+        });
+        
+        return (function nextSum() {
             [].forEach.call(arguments, function(item) {
                 result = result + item;
             });
-        
-            return (function nextSum() {
-                [].forEach.call(arguments, function(item) {
-                    result = result + item;
-                });
                 
-                nextSum.toString = function () {
-                    return result;
-                }
+            nextSum.toString = function () {
+                return result;
+            }
                 
-                return nextSum;
-            })();
-        };
+            return nextSum;
+        })();
+    };
     
-        alert(smartSum(3));
-        alert(smartSum(1, 2));
-        alert(smartSum(1, 3)(2));
-        alert(smartSum(1, 2)(3, 4, 5)(6)(7, 10));
+    alert(smartSum(3));
+    alert(smartSum(1, 2));
+    alert(smartSum(1, 3)(2));
+    alert(smartSum(1, 2)(3, 4, 5)(6)(7, 10));
     
 </script> 
 
