@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Homework 2, Task 2</title> 
+
+<script>
+    
+    function main() {
+        var currentCount = 1;
+        return function() {
+            return currentCount++;
+        }
+    }
+    
+    var counter = main();
+    alert(counter());
+    alert(counter());
+    alert(counter());
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>
