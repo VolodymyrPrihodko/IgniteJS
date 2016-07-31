@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Classwork 1, Task 1</title> 
+
+<script>
+    
+    var user = {
+    };
+           
+    user.name = "Вася";
+    user.surname = "Петров";
+    for (element in user) {        
+        document.write(user[element] + " ");
+    }; 
+    document.write("<br />");
+    
+    user.name = "Сергей";
+    for (element in user) {        
+        document.write(user[element] + " ");
+    };
+    document.write("<br />");
+    
+    delete user.name;
+    for (element in user) {        
+        document.write(user[element] + " ");
+    }; 
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>

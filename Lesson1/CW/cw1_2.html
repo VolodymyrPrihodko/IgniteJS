@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta charset="utf-8">
+<title>Classwork 1, Task 2</title> 
+
+<script>
+    
+    function isEmpty(obj) {
+        var count = 0;
+        for (var prop in obj) {
+            count++;
+        }
+        
+        if (count == 0) {
+            return true;
+        }
+        
+        return false;
+    }
+    
+    var obj = {
+        name: "kek",
+    }
+    
+    alert(isEmpty(obj));
+    
+</script> 
+
+</head> 
+	
+<body>
+</body>
+</html>
